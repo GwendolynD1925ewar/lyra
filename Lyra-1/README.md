@@ -34,7 +34,7 @@ The ability to generate virtual environments is crucial for applications ranging
 
 Please follow the [INSTALL.md](INSTALL.md) to set up your conda environment and download pre-trained weights.
 
-> **Personal note:** I had to use Python 3.10 (not 3.11+) to get the CUDA extensions to compile cleanly on my machine. YMMV.
-
-## Demo
-Lyra supports both images and videos as input. Below are examples of running Lyra on sing
+> **Personal notes:**
+> - I had to use Python 3.10 (not 3.11+) to get the CUDA extensions to compile correctly.
+> - On Ubuntu 22.04 with CUDA 11.8, I also needed to run `export TORCH_CUDA_ARCH_LIST="7.0;7.5;8.0;8.6"` before the install step to avoid arch mismatch errors.
+> - Tested successfully on an RTX 3090 with 24 GB VRAM — inference on a single image takes ~15 seconds.
